@@ -3,6 +3,8 @@ import routes from './routes';
 
 import './database';
 
+import Cors from './cors';
+
 class App {
   constructor() {
     this.server = express();
@@ -11,6 +13,7 @@ class App {
   }
 
   routes() {
+    this.server.use(Cors());
     this.server.use(express.json());
     this.server.use(express.urlencoded({ extended: true }));
     this.server.use(routes);

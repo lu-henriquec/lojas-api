@@ -1,8 +1,8 @@
 import { Router } from 'express';
-const router = new Router();
 import { check } from 'express-validator';
-
 import LojaController from '../controllers/LojaController';
+
+const router = new Router();
 
 // router.get('/', (req, res) => {
 //   res.status(200).send({
@@ -11,7 +11,7 @@ import LojaController from '../controllers/LojaController';
 //   });
 // });
 
-function checkPostLoja(req, res, next) {
+function checkPostLoja() {
   return [
     check('name', 'Adicione um nome')
       .not()
