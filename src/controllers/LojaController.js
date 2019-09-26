@@ -60,7 +60,9 @@ class LojaController {
     try {
       await Loja.findByIdAndRemove(req.params.id);
 
-      res.status(201).send({ message: 'Loja excluida com sucesso!' });
+      res
+        .status(200)
+        .send({ status: 200, message: 'Loja excluida com sucesso!' });
     } catch (e) {
       res.status(500).send({ message: 'Falha ao excluir a loja.' });
     }
