@@ -29,7 +29,9 @@ class LojaController {
 
       await loja.save();
 
-      res.status(201).send({ message: 'Loja cadastrada com sucesso!' });
+      res
+        .status(201)
+        .send({ status: 201, message: 'Loja cadastrada com sucesso!' });
     } catch (e) {
       res.status(500).send({ message: 'Falha ao cadastrar a loja.' });
     }
@@ -50,7 +52,9 @@ class LojaController {
         address,
       });
 
-      res.status(200).send({ message: 'Loja atualizada com sucesso!' });
+      res
+        .status(200)
+        .send({ status: 200, message: 'Loja atualizada com sucesso!' });
     } catch (e) {
       res.status(500).send({ message: 'Falha ao atualizar a loja.' });
     }
