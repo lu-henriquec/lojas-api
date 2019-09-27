@@ -1,9 +1,5 @@
 import mongoose from 'mongoose';
-// import 'dotenv/config';
-
-require('dotenv').config({
-  path: process.env.NODE_ENV === 'development' ? '.env.development' : '.env',
-});
+import 'dotenv/config';
 
 // Database
 mongoose.connect(process.env.DATABASE_CONNECTION_STRING, {

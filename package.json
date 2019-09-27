@@ -23,6 +23,6 @@
   },
   "scripts": {
     "prod": "nodemon bin/server",
-    "dev": "NODE_ENV=development nodemon bin/server"
+    "dev": "nodemon bin/server"
   }
 }
