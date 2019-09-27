@@ -22,7 +22,7 @@
     "sucrase": "^3.10.1"
   },
   "scripts": {
-    "dev2": "node node_modules/nodemon/bin/nodemon bin/server",
-    "dev": "nodemon bin/server"
+    "prod": "nodemon bin/server",
+    "dev": "NODE_ENV=development nodemon bin/server"
   }
 }
