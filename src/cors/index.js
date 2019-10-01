@@ -1,6 +1,7 @@
 import cors from 'cors';
+import 'dotenv/config';
 
-const allowedOrigins = ['http://localhost:8080', 'http://yourapp.com'];
+const allowedOrigins = process.env.ALLOWEDORIGINS.split(' ');
 
 function Cors() {
   return cors({
