@@ -31,9 +31,9 @@ function checkPostLoja() {
   ];
 }
 
-router.get('/lojas', LojaController.index);
-router.post('/lojas', checkPostLoja(), LojaController.create);
-router.put('/loja/:id', checkPostLoja(), LojaController.update);
-router.delete('/loja/:id', LojaController.delete);
+router.get('/api/lojas', LojaController.index);
+router.post('/api/lojas', checkPostLoja(), LojaController.create);
+router.put('/api/loja/:id', checkPostLoja(), LojaController.update);
+router.delete('/api/loja/:id', LojaController.delete);
 
 export default router;
